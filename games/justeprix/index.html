@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juste Prix | Collection de Jeux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Le Juste Prix</h1>
+            <a href="../../index.html" class="home-button">Retour à l'accueil</a>
+        </header>
+        
+        <div class="game-status">
+            <div id="info-message">
+                <p>Je pense à un prix entre <span class="highlight">1</span> et <span class="highlight">1000</span>.</p>
+                <p>Pouvez-vous le deviner ?</p>
+            </div>
+            
+            <div class="attempts-info">
+                <p>Tentatives : <span id="attempt-count">0</span></p>
+                <p>Meilleur score : <span id="best-score">-</span></p>
+            </div>
+        </div>
+        
+        <div class="game-area">
+            <div class="price-display">
+                <div class="price-box" id="price-display">?</div>
+                <div id="result-message" class="hidden"></div>
+            </div>
+            
+            <div class="guess-form">
+                <div class="input-wrapper">
+                    <input type="number" id="guess-input" placeholder="Votre estimation" min="1" max="1000">
+                    <div class="hint-icon" id="hint-icon">💡</div>
+                </div>
+                <button id="guess-button">Deviner</button>
+            </div>
+            
+            <div class="hint-panel" id="hint-panel">
+                <div class="arrow-indicator">
+                    <div class="arrow up" id="arrow-up">▲</div>
+                    <div class="arrow down" id="arrow-down">▼</div>
+                </div>
+                <div class="history-container">
+                    <h3>Historique des tentatives</h3>
+                    <ul id="guess-history"></ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="new-game">Nouvelle partie</button>
+            <div class="difficulty">
+                <span>Difficulté :</span>
+                <select id="difficulty-select">
+                    <option value="easy">Facile (1-100)</option>
+                    <option value="medium" selected>Normal (1-1000)</option>
+                    <option value="hard">Difficile (1-10000)</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <div class="confetti"></div>
+            <h2 id="win-message">Félicitations !</h2>
+            <p id="win-details"></p>
+            <div class="price-reveal">
+                <span>Le juste prix était :</span>
+                <div class="final-price" id="final-price"></div>
+            </div>
+            <button id="play-again">Rejouer</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

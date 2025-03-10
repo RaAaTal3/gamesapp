@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puissance 4 | Collection de Jeux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Puissance 4</h1>
+            <a href="../../index.html" class="home-button">Retour à l'accueil</a>
+        </header>
+        
+        <div class="game-status">
+            <div class="player-info">
+                <div class="player player-1">
+                    <div class="player-disc"></div>
+                    <span>Joueur 1</span>
+                </div>
+                <div class="player player-2">
+                    <div class="player-disc"></div>
+                    <span>Joueur 2</span>
+                </div>
+            </div>
+            <div id="status-message">Au tour du Joueur 1</div>
+        </div>
+        
+        <div class="board-container">
+            <div class="board-columns" id="column-buttons">
+                <!-- Boutons pour placer les jetons (générés par JS) -->
+            </div>
+            <div class="board" id="game-board">
+                <!-- La grille de jeu sera générée par JavaScript -->
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="reset-button">Nouvelle partie</button>
+            <div class="score-board">
+                <div class="score">
+                    <div class="player-disc player-1-disc"></div>
+                    <span id="score-player1">0</span>
+                </div>
+                <div class="score">
+                    <div class="player-disc player-2-disc"></div>
+                    <span id="score-player2">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="win-message">Félicitations !</h2>
+            <p id="win-details"></p>
+            <button id="play-again">Rejouer</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

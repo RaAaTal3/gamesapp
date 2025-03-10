@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Dames | Collection de Jeux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Jeu de Dames</h1>
+            <a href="../../index.html" class="home-button">Retour à l'accueil</a>
+        </header>
+        
+        <div class="game-info">
+            <div class="player-turn">
+                <div class="player-indicator">
+                    <div class="player-name">Au tour du joueur</div>
+                    <div id="current-player" class="player-piece white"></div>
+                </div>
+            </div>
+            
+            <div class="game-stats">
+                <div class="stats-item">
+                    <div class="player-piece white"></div>
+                    <span id="white-count">12</span>
+                </div>
+                <div class="stats-item">
+                    <div class="player-piece black"></div>
+                    <span id="black-count">12</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="board-container">
+            <div id="checkers-board" class="checkers-board">
+                <!-- Le plateau sera généré par JavaScript -->
+            </div>
+            
+            <div id="game-over-overlay" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2 id="winner-message">Victoire !</h2>
+                    <p id="winner-details">Le joueur a gagné la partie.</p>
+                    <button id="restart-button">Nouvelle partie</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="new-game">Nouvelle partie</button>
+            <div class="mode-select">
+                <label for="game-mode">Mode :</label>
+                <select id="game-mode">
+                    <option value="2-players">2 Joueurs</option>
+                    <option value="vs-computer">Contre l'ordinateur</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="game-rules">
+            <h3>Règles du jeu</h3>
+            <ul>
+                <li>Les pions blancs commencent la partie</li>
+                <li>Les pions ne peuvent se déplacer qu'en diagonale vers l'avant</li>
+                <li>Pour prendre un pion adverse, votre pion doit le survoler en diagonale</li>
+                <li>Les pions atteignant la dernière rangée adverse deviennent des dames</li>
+                <li>Les dames peuvent se déplacer en diagonale sur n'importe quelle distance</li>
+                <li>La prise est obligatoire et les prises multiples sont possibles</li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

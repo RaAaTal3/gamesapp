@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendu | Collection de Jeux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Le Pendu</h1>
+            <a href="../../index.html" class="home-button">Retour à l'accueil</a>
+        </header>
+        
+        <div class="game-wrapper">
+            <div class="hangman-container">
+                <svg height="250" width="200" class="hangman">
+                    <!-- Potence -->
+                    <line x1="60" y1="20" x2="140" y2="20" class="hangman-part hidden" id="part-1"/>
+                    <line x1="140" y1="20" x2="140" y2="50" class="hangman-part hidden" id="part-2"/>
+                    <line x1="60" y1="20" x2="60" y2="230" class="hangman-part hidden" id="part-3"/>
+                    <line x1="20" y1="230" x2="100" y2="230" class="hangman-part hidden" id="part-4"/>
+                    
+                    <!-- Tête -->
+                    <circle cx="140" cy="70" r="20" class="hangman-part hidden" id="part-5"/>
+                    
+                    <!-- Corps -->
+                    <line x1="140" y1="90" x2="140" y2="150" class="hangman-part hidden" id="part-6"/>
+                    
+                    <!-- Bras -->
+                    <line x1="140" y1="120" x2="120" y2="100" class="hangman-part hidden" id="part-7"/>
+                    <line x1="140" y1="120" x2="160" y2="100" class="hangman-part hidden" id="part-8"/>
+                    
+                    <!-- Jambes -->
+                    <line x1="140" y1="150" x2="120" y2="180" class="hangman-part hidden" id="part-9"/>
+                    <line x1="140" y1="150" x2="160" y2="180" class="hangman-part hidden" id="part-10"/>
+                </svg>
+            </div>
+            
+            <div class="game-info">
+                <div class="word-container" id="word-display">
+                    <!-- Le mot caché sera généré ici -->
+                </div>
+                
+                <div class="attempts-info">
+                    <p>Tentatives restantes: <span id="attempts">10</span></p>
+                    <p>Lettres utilisées: <span id="used-letters"></span></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="keyboard" id="keyboard">
+                <!-- Le clavier virtuel sera généré ici -->
+            </div>
+            
+            <div class="game-controls">
+                <button id="new-game">Nouvelle partie</button>
+                <div class="stats">
+                    <div class="stat">Victoires: <span id="wins">0</span></div>
+                    <div class="stat">Défaites: <span id="losses">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="result-message">Félicitations !</h2>
+            <p id="result-details"></p>
+            <div class="revealed-word">
+                Le mot était: <span id="revealed-word"></span>
+            </div>
+            <button id="play-again">Rejouer</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

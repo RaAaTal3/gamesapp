@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morpion | Collection de Jeux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Morpion</h1>
+            <a href="../../index.html" class="home-button">Retour à l'accueil</a>
+        </header>
+        
+        <div class="game-status">
+            <p id="status-message">Au tour du joueur <span id="current-player">X</span></p>
+        </div>
+        
+        <div class="board">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+        
+        <div class="game-controls">
+            <button id="reset-button">Nouvelle partie</button>
+            <div class="score-board">
+                <div class="score">
+                    <span class="player">X</span>: <span id="score-x">0</span>
+                </div>
+                <div class="score">
+                    <span class="player">O</span>: <span id="score-o">0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="win-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="win-message">Félicitations !</h2>
+            <p id="win-details"></p>
+            <button id="play-again">Rejouer</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
